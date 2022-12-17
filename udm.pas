@@ -25,6 +25,7 @@ type
     TClientesNUMERO: TStringField;
     TClientesOBSERVACAO: TStringField;
     TClientesRG_IE: TStringField;
+    TClientesSEXO: TStringField;
     TClientesTELEFONE_1: TStringField;
     TClientesTELEFONE_2: TStringField;
     TClientesTIPO_PESSOA: TStringField;
@@ -41,6 +42,7 @@ var
   DM: TDM;
 
 implementation
+
 
 {$R *.lfm}
 

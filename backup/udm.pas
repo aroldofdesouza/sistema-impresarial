@@ -13,6 +13,22 @@ type
 
   TDM = class(TDataModule)
     DSClientes: TDataSource;
+    TClientesBAIRRO: TStringField;
+    TClientesCEP: TStringField;
+    TClientesCHAVE: TLongintField;
+    TClientesCIDADE: TStringField;
+    TClientesCOMPLEMENTO: TStringField;
+    TClientesCPF_CNPJ: TStringField;
+    TClientesEMAIL: TStringField;
+    TClientesLOGRADOURO: TStringField;
+    TClientesNOME: TStringField;
+    TClientesNUMERO: TStringField;
+    TClientesOBSERVACAO: TStringField;
+    TClientesRG_IE: TStringField;
+    TClientesTELEFONE_1: TStringField;
+    TClientesTELEFONE_2: TStringField;
+    TClientesTIPO_PESSOA: TStringField;
+    TClientesUF: TStringField;
     ZConnection1: TZConnection;
     TClientes: TZTable;
   private
@@ -25,6 +41,7 @@ var
   DM: TDM;
 
 implementation
+
 
 {$R *.lfm}
 

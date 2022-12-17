@@ -7,6 +7,7 @@ object FMenu: TFMenu
   ClientHeight = 412
   ClientWidth = 692
   Menu = MainMenu1
+  OnCreate = FormCreate
   LCLVersion = '2.2.4.0'
   object Panel1: TPanel
     Left = 0
@@ -542,6 +543,7 @@ object FMenu: TFMenu
         0000000000000000000000000000000000000000000000000000
       }
       Layout = blGlyphTop
+      OnClick = btnCadastroClientesClick
     end
   end
   object MainMenu1: TMainMenu
@@ -551,6 +553,7 @@ object FMenu: TFMenu
       Caption = 'Cadastros'
       object MenuItem2: TMenuItem
         Caption = 'Cadastro de Clientes'
+        OnClick = MenuItem2Click
       end
       object MenuItem3: TMenuItem
         Caption = 'Cadastro de Produtos'

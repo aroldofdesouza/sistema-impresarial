@@ -44,6 +44,7 @@
         <Filename Value="umenu.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FMenu"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uMenu"/>
       </Unit>
@@ -51,8 +52,25 @@
         <Filename Value="udm.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="DM"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="uDM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ucadastrocliente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FCadastroCliente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uCadastroCliente"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uedicaocliente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FEdicaoCliente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uEdicaoCliente"/>
       </Unit>
     </Units>
   </ProjectOptions>

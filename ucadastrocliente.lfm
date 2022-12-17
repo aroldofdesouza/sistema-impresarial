@@ -1,0 +1,8 @@
+object FCadastroCliente: TFCadastroCliente
+  Left = 257
+  Height = 383
+  Top = 145
+  Width = 597
+  Caption = 'Cadastro de Clientes'
+  LCLVersion = '2.2.4.0'
+end

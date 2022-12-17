@@ -1,0 +1,34 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 313
+  HorizontalOffset = 257
+  VerticalOffset = 145
+  Width = 466
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Properties.Strings = (
+      'AutoEncodeStrings=True'
+      'controls_cp=CP_UTF8'
+    )
+    Connected = True
+    Port = 3050
+    Database = 'C:\Projetos\Lazarus\Sistema-Impresarial\BANCODADOS\SISTEMA-IMPRESARIAL.FDB'
+    User = 'SYSDBA'
+    Password = 'masterkey'
+    Protocol = 'firebird-3.0'
+    Left = 40
+    Top = 32
+  end
+  object TClientes: TZTable
+    Connection = ZConnection1
+    TableName = 'CLIENTES'
+    Left = 144
+    Top = 32
+  end
+  object DSClientes: TDataSource
+    DataSet = TClientes
+    Left = 144
+    Top = 108
+  end
+end

@@ -1,7 +1,7 @@
 object FEdicaoCliente: TFEdicaoCliente
-  Left = 299
+  Left = 262
   Height = 508
-  Top = 128
+  Top = 129
   Width = 649
   BorderStyle = bsSingle
   Caption = 'Cadastro de Cliente'

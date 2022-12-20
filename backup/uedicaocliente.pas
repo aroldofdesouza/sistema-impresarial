@@ -98,7 +98,7 @@ begin
     btnCancelar.Enabled:=False;
     Close;
   end
-  esle
+  else
   begin
     ShowMessage('Preencha o campo nome.');
     DBnome.SetFocus;

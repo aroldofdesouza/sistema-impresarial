@@ -72,6 +72,20 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uEdicaoCliente"/>
       </Unit>
+      <Unit>
+        <Filename Value="ucadastroproduto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FCadastroProduto"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uCadastroProduto"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uedicaoproduto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FEdicaoProduto"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uEdicaoProduto"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

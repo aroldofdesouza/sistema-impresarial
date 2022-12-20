@@ -46,6 +46,7 @@ uses uDM, uEdicaoCliente;
 
 procedure TFCadastroCliente.btnInserirClick(Sender: TObject);
 begin
+  DM.TClientes.Filtered:=False;
   QUltimaChaveCliente.Close;
   QUltimaChaveCliente.Open;
   DM.TClientes.Insert;
@@ -62,6 +63,7 @@ end;
 
 procedure TFCadastroCliente.btnEditarClick(Sender: TObject);
 begin
+  DM.TClientes.Filtered:=False;
   DM.TClientes.Edit;
   FEdicaoCliente := TFEdicaoCliente.Create(Self);
   FEdicaoCliente.ShowModal;

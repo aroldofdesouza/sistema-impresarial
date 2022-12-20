@@ -10,7 +10,8 @@ uses
   athreads,
   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, zcomponent, uMenu, uDM, uCadastroCliente, uEdicaoCliente
+  Forms, zcomponent, uMenu, uDM, uCadastroCliente, uEdicaoCliente, 
+uCadastroProduto, uEdicaoProduto
   { you can add units after this };
 
 {$R *.res}
@@ -21,6 +22,8 @@ begin
   Application.Initialize;
   Application.CreateForm(TFMenu, FMenu);
   Application.CreateForm(TFEdicaoCliente, FEdicaoCliente);
+  Application.CreateForm(TFCadastroProduto, FCadastroProduto);
+  Application.CreateForm(TFEdicaoProduto, FEdicaoProduto);
   Application.Run;
 end.
 

@@ -12,6 +12,7 @@ type
   { TDM }
 
   TDM = class(TDataModule)
+    DSProdutos: TDataSource;
     DSClientes: TDataSource;
     TClientesBAIRRO: TStringField;
     TClientesCEP: TStringField;
@@ -30,8 +31,20 @@ type
     TClientesTELEFONE_2: TStringField;
     TClientesTIPO_PESSOA: TStringField;
     TClientesUF: TStringField;
+    TProdutosCHAVE: TLongintField;
+    TProdutosCODIGOBARRAS: TStringField;
+    TProdutosDESCRICAO: TStringField;
+    TProdutosESTOQUE: TFloatField;
+    TProdutosOBSERVACAO: TStringField;
+    TProdutosPRECO_COMPRA: TFloatField;
+    TProdutosPRECO_VENDA: TFloatField;
+    TProdutosUNIDADE: TStringField;
     ZConnection1: TZConnection;
     TClientes: TZTable;
+    TProdutos: TZTable;
+    TVenda: TZTable;
+    TItemVenda: TZTable;
+    TContaAReceber: TZTable;
   private
 
   public

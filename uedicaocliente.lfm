@@ -325,7 +325,7 @@ object FEdicaoCliente: TFEdicaoCliente
       'TO'
     )
     MaxLength = 0
-    Style = csOwnerDrawFixed
+    Style = csOwnerDrawEditableFixed
     TabOrder = 12
   end
   object Label14: TLabel
@@ -343,6 +343,7 @@ object FEdicaoCliente: TFEdicaoCliente
     Width = 592
     DataField = 'EMAIL'
     DataSource = DM.DSClientes
+    CharCase = ecLowerCase
     MaxLength = 0
     TabOrder = 15
   end

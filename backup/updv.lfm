@@ -3,7 +3,7 @@ object FPDV: TFPDV
   Height = 509
   Top = 145
   Width = 1046
-  Caption = 'FPDV'
+  Caption = 'Ponto de Venda'
   ClientHeight = 509
   ClientWidth = 1046
   LCLVersion = '2.2.4.0'
@@ -73,7 +73,25 @@ object FPDV: TFPDV
     Top = 410
     Width = 1046
     Align = alBottom
+    ClientHeight = 99
+    ClientWidth = 1046
     TabOrder = 1
+    object btnConcluir: TSpeedButton
+      Left = 1
+      Height = 97
+      Top = 1
+      Width = 743
+      Align = alClient
+      Caption = 'Concluir Venda'
+    end
+    object btnCancelar: TSpeedButton
+      Left = 744
+      Height = 97
+      Top = 1
+      Width = 301
+      Align = alRight
+      Caption = 'Cancelar e Sair'
+    end
   end
   object PageControl1: TPageControl
     Left = 0
@@ -104,6 +122,7 @@ object FPDV: TFPDV
           Top = 8
           Width = 150
           Caption = 'Inserir Item'
+          OnClick = btnInserirItemClick
         end
         object btnEditarItem: TSpeedButton
           Left = 176
@@ -111,6 +130,7 @@ object FPDV: TFPDV
           Top = 8
           Width = 150
           Caption = 'Editar Item'
+          OnClick = btnEditarItemClick
         end
         object Panel4: TPanel
           Left = 871
@@ -386,5 +406,41 @@ object FPDV: TFPDV
     Caption = 'VALOR TOTAL'
     ParentColor = False
     OnClick = Label3Click
+  end
+  object QUltimaChaveItemVenda: TZQuery
+    Connection = DM.ZConnection1
+    SQL.Strings = (
+      'SELECT MAX(CHAVE) + 1 FROM ITEM_VENDAS'
+    )
+    Params = <>
+    Left = 53
+    Top = 196
+    object QUltimaChaveItemVendaADD: TLargeintField
+      FieldKind = fkData
+      FieldName = 'ADD'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+  end
+  object QUltimaChaveContaAReceber: TZQuery
+    Connection = DM.ZConnection1
+    SQL.Strings = (
+      'SELECT MAX(CHAVE) + 1 FROM CONTA_A_RECEBER'
+    )
+    Params = <>
+    Left = 53
+    Top = 272
+    object QUltimaChaveContaAReceberADD: TLargeintField
+      FieldKind = fkData
+      FieldName = 'ADD'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
   end
 end

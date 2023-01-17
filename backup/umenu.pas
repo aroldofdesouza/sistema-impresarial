@@ -13,6 +13,7 @@ type
   { TFMenu }
 
   TFMenu = class(TForm)
+    btnPDV: TSpeedButton;
     MainMenu1: TMainMenu;
     MenuItem1: TMenuItem;
     MenuItem2: TMenuItem;
@@ -22,7 +23,9 @@ type
     btnCadastroProduto: TSpeedButton;
     procedure Abrir_Tela_CadastroCliente();
     procedure Abrir_Tela_CadastroProduto();
+    procedure Abrir_Tela_PDV();
     procedure btnCadastroClientesClick(Sender: TObject);
+    procedure btnPDVClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure MenuItem2Click(Sender: TObject);
     procedure btnCadastroProdutoClick(Sender: TObject);
@@ -38,7 +41,7 @@ var
 
 implementation
 
-uses uDM, uCadastroCliente, uCadastroProduto;
+uses uDM, uCadastroCliente, uCadastroProduto, uPDV;
 
 {$R *.lfm}
 
@@ -56,15 +59,27 @@ begin
   FCadastroProduto.ShowModal;
 end;
 
+procedure TFMenu.Abrir_Tela_PDV;
+begin
+  FPDV := TFPDV.Create(Self);
+  FPDV.ShowModal;
+end;
+
 procedure TFMenu.btnCadastroClientesClick(Sender: TObject);
 begin
   Abrir_Tela_CadastroCliente();
+end;
+
+procedure TFMenu.btnPDVClick(Sender: TObject);
+begin
+  Abrir_Tela_PDV();
 end;
 
 procedure TFMenu.FormCreate(Sender: TObject);
 begin
   DM := TDM.Create(Self);
   DM.TClientes.Open;
+  DM.TProdutos.Open;
 end;
 
 procedure TFMenu.MenuItem2Click(Sender: TObject);

@@ -5,8 +5,8 @@ unit uPDV;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, ComCtrls,
-  StdCtrls, Buttons, DBGrids, DBCtrls;
+  Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, ExtCtrls, ComCtrls,
+  StdCtrls, Buttons, DBGrids, DBCtrls, ZDataset;
 
 type
 
@@ -44,8 +44,16 @@ type
     Panel4: TPanel;
     Panel5: TPanel;
     btnGerarParcelas: TSpeedButton;
+    btnConcluir: TSpeedButton;
+    btnCancelar: TSpeedButton;
+    QUltimaChaveContaAReceberADD: TLargeintField;
+    QUltimaChaveItemVendaADD: TLargeintField;
     TabSheet1: TTabSheet;
     TabSheet2: TTabSheet;
+    QUltimaChaveItemVenda: TZQuery;
+    QUltimaChaveContaAReceber: TZQuery;
+    procedure btnEditarItemClick(Sender: TObject);
+    procedure btnInserirItemClick(Sender: TObject);
     procedure Label3Click(Sender: TObject);
   private
 
@@ -55,10 +63,11 @@ type
 
 var
   FPDV: TFPDV;
+  inserindo_novo_item: Boolean;
 
 implementation
 
-uses uDM;
+uses uDM, uEdicaoItemVenda;
 
 {$R *.lfm}
 
@@ -67,6 +76,26 @@ uses uDM;
 procedure TFPDV.Label3Click(Sender: TObject);
 begin
 
+end;
+
+procedure TFPDV.btnInserirItemClick(Sender: TObject);
+begin
+  inserindo_novo_item := True;
+  QUltimaChaveItemVenda.Close;
+  QUltimaChaveItemVenda.Open;
+  DM.TItemVenda.Insert;
+  DM.TItemVendaCHAVE.Value:=QUltimaChaveItemVendaADD.Value;
+  DM.TItemVendaCHAVE_VENDA.Value := DM.TVendaCHAVE.Value;
+  FEdicaoItemVenda := TFEdicaoItemVenda.Create(Self);
+  FEdicaoItemVenda.ShowModal;
+end;
+
+procedure TFPDV.btnEditarItemClick(Sender: TObject);
+begin
+  inserindo_novo_item := False;
+  DM.TItemVenda.Edit;
+  FEdicaoItemVenda := TFEdicaoItemVenda.Create(Self);
+  FEdicaoItemVenda.ShowModal;
 end;
 
 end.

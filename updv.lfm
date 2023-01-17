@@ -3,7 +3,7 @@ object FPDV: TFPDV
   Height = 509
   Top = 145
   Width = 1046
-  Caption = 'FPDV'
+  Caption = 'Ponto de Venda'
   ClientHeight = 509
   ClientWidth = 1046
   LCLVersion = '2.2.4.0'
@@ -122,6 +122,7 @@ object FPDV: TFPDV
           Top = 8
           Width = 150
           Caption = 'Inserir Item'
+          OnClick = btnInserirItemClick
         end
         object btnEditarItem: TSpeedButton
           Left = 176
@@ -129,6 +130,7 @@ object FPDV: TFPDV
           Top = 8
           Width = 150
           Caption = 'Editar Item'
+          OnClick = btnEditarItemClick
         end
         object Panel4: TPanel
           Left = 871
@@ -145,6 +147,7 @@ object FPDV: TFPDV
             Top = 8
             Width = 150
             Caption = 'Excluir Item'
+            OnClick = btnExcluirItemClick
           end
         end
       end
@@ -404,5 +407,41 @@ object FPDV: TFPDV
     Caption = 'VALOR TOTAL'
     ParentColor = False
     OnClick = Label3Click
+  end
+  object QUltimaChaveItemVenda: TZQuery
+    Connection = DM.ZConnection1
+    SQL.Strings = (
+      'SELECT MAX(CHAVE) + 1 FROM ITEM_VENDAS'
+    )
+    Params = <>
+    Left = 53
+    Top = 196
+    object QUltimaChaveItemVendaADD: TLargeintField
+      FieldKind = fkData
+      FieldName = 'ADD'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+  end
+  object QUltimaChaveContaAReceber: TZQuery
+    Connection = DM.ZConnection1
+    SQL.Strings = (
+      'SELECT MAX(CHAVE) + 1 FROM CONTA_A_RECEBER'
+    )
+    Params = <>
+    Left = 53
+    Top = 272
+    object QUltimaChaveContaAReceberADD: TLargeintField
+      FieldKind = fkData
+      FieldName = 'ADD'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
   end
 end

@@ -1,7 +1,7 @@
 object FEdicaoCliente: TFEdicaoCliente
-  Left = 299
+  Left = 262
   Height = 508
-  Top = 128
+  Top = 129
   Width = 649
   BorderStyle = bsSingle
   Caption = 'Cadastro de Cliente'
@@ -292,6 +292,7 @@ object FEdicaoCliente: TFEdicaoCliente
     Height = 21
     Top = 226
     Width = 45
+    AutoDropDown = True
     DataField = 'UF'
     DataSource = DM.DSClientes
     ItemHeight = 15
@@ -343,6 +344,7 @@ object FEdicaoCliente: TFEdicaoCliente
     Width = 592
     DataField = 'EMAIL'
     DataSource = DM.DSClientes
+    CharCase = ecLowerCase
     MaxLength = 0
     TabOrder = 15
   end

@@ -1,0 +1,408 @@
+object FPDV: TFPDV
+  Left = 257
+  Height = 509
+  Top = 145
+  Width = 1046
+  Caption = 'FPDV'
+  ClientHeight = 509
+  ClientWidth = 1046
+  LCLVersion = '2.2.4.0'
+  WindowState = wsMaximized
+  object Panel1: TPanel
+    Left = 0
+    Height = 72
+    Top = 0
+    Width = 1046
+    Align = alTop
+    ClientHeight = 72
+    ClientWidth = 1046
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 16
+      Height = 15
+      Top = 8
+      Width = 69
+      Caption = 'SEQUENCIAL'
+      ParentColor = False
+    end
+    object DBText1: TDBText
+      Left = 16
+      Height = 15
+      Top = 32
+      Width = 41
+      DataField = 'CHAVE'
+      DataSource = DM.DSVenda
+      ParentColor = False
+    end
+    object Label2: TLabel
+      Left = 96
+      Height = 15
+      Top = 8
+      Width = 50
+      Caption = 'NÚMERO'
+      ParentColor = False
+    end
+    object DBEdit1: TDBEdit
+      Left = 96
+      Height = 23
+      Top = 24
+      Width = 80
+      DataField = 'NUMERO'
+      DataSource = DM.DSVenda
+      MaxLength = 0
+      TabOrder = 0
+    end
+    object DBLookupComboBox1: TDBLookupComboBox
+      Left = 448
+      Height = 23
+      Top = 24
+      Width = 376
+      DataField = 'CLIENTE'
+      DataSource = DM.DSVenda
+      KeyField = 'CHAVE'
+      ListField = 'NOME'
+      ListFieldIndex = 0
+      ListSource = DM.DSClientes
+      LookupCache = False
+      TabOrder = 1
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 99
+    Top = 410
+    Width = 1046
+    Align = alBottom
+    ClientHeight = 99
+    ClientWidth = 1046
+    TabOrder = 1
+    object btnConcluir: TSpeedButton
+      Left = 1
+      Height = 97
+      Top = 1
+      Width = 743
+      Align = alClient
+      Caption = 'Concluir Venda'
+    end
+    object btnCancelar: TSpeedButton
+      Left = 744
+      Height = 97
+      Top = 1
+      Width = 301
+      Align = alRight
+      Caption = 'Cancelar e Sair'
+    end
+  end
+  object PageControl1: TPageControl
+    Left = 0
+    Height = 338
+    Top = 72
+    Width = 1046
+    ActivePage = TabSheet1
+    Align = alClient
+    TabIndex = 0
+    TabOrder = 2
+    object TabSheet1: TTabSheet
+      Caption = 'ITENS DA VENDA'
+      ClientHeight = 310
+      ClientWidth = 1038
+      object Panel3: TPanel
+        Left = 0
+        Height = 64
+        Top = 0
+        Width = 1038
+        Align = alTop
+        BevelOuter = bvNone
+        ClientHeight = 64
+        ClientWidth = 1038
+        TabOrder = 0
+        object btnInserirItem: TSpeedButton
+          Left = 8
+          Height = 45
+          Top = 8
+          Width = 150
+          Caption = 'Inserir Item'
+        end
+        object btnEditarItem: TSpeedButton
+          Left = 176
+          Height = 45
+          Top = 8
+          Width = 150
+          Caption = 'Editar Item'
+        end
+        object Panel4: TPanel
+          Left = 871
+          Height = 64
+          Top = 0
+          Width = 167
+          Align = alRight
+          ClientHeight = 64
+          ClientWidth = 167
+          TabOrder = 0
+          object btnExcluirItem: TSpeedButton
+            Left = 8
+            Height = 45
+            Top = 8
+            Width = 150
+            Caption = 'Excluir Item'
+          end
+        end
+      end
+      object DBGrid1: TDBGrid
+        Left = 0
+        Height = 246
+        Top = 64
+        Width = 1038
+        Align = alClient
+        Color = clWindow
+        Columns = <        
+          item
+            Title.Caption = 'CHAVE'
+            FieldName = 'CHAVE_PRODUTO'
+          end        
+          item
+            Title.Caption = 'DESCRIÇÃO DO PRODUTO'
+            Width = 600
+            FieldName = 'DESCRICAO'
+          end        
+          item
+            Title.Caption = 'PREÇO UNIT.'
+            Width = 150
+            FieldName = 'PRECO_UNITARIO'
+          end        
+          item
+            Title.Caption = 'QTDE.'
+            Width = 125
+            FieldName = 'QUANTIDADE'
+          end        
+          item
+            Title.Caption = 'VALOR TOTAL'
+            Width = 150
+            FieldName = 'VALOR_TOTAL'
+          end>
+        DataSource = DM.DSItemVenda
+        Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+        TabOrder = 1
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'FATURAMENTO'
+      ClientHeight = 310
+      ClientWidth = 1038
+      object Panel5: TPanel
+        Left = 0
+        Height = 64
+        Top = 0
+        Width = 1038
+        Align = alTop
+        ClientHeight = 64
+        ClientWidth = 1038
+        TabOrder = 0
+        object Label7: TLabel
+          Left = 16
+          Height = 15
+          Top = 8
+          Width = 142
+          Caption = 'VALOR PAGO DE ENTRADA'
+          ParentColor = False
+          OnClick = Label3Click
+        end
+        object DBEdit6: TDBEdit
+          Left = 16
+          Height = 23
+          Top = 24
+          Width = 182
+          DataField = 'VALOR_PAGO_ENTRADA'
+          DataSource = DM.DSVenda
+          MaxLength = 0
+          TabOrder = 0
+        end
+        object Label8: TLabel
+          Left = 208
+          Height = 15
+          Top = 8
+          Width = 106
+          Caption = 'QTDE. DE PARCELAS'
+          ParentColor = False
+          OnClick = Label3Click
+        end
+        object DBEdit7: TDBEdit
+          Left = 208
+          Height = 23
+          Top = 24
+          Width = 120
+          DataField = 'QUANTIDADE_PARCELAS'
+          DataSource = DM.DSVenda
+          MaxLength = 0
+          TabOrder = 1
+        end
+        object Label9: TLabel
+          Left = 352
+          Height = 15
+          Top = 8
+          Width = 75
+          Caption = 'DIA DO VENC.'
+          ParentColor = False
+          OnClick = Label3Click
+        end
+        object DBComboBox1: TDBComboBox
+          Left = 352
+          Height = 23
+          Top = 24
+          Width = 100
+          DataField = 'DIA_DO_MES_PRA_VENCER'
+          DataSource = DM.DSVenda
+          ItemHeight = 15
+          Items.Strings = (
+            '1'
+            '2'
+            '3'
+            '4'
+            '5'
+            '6'
+            '7'
+            '8'
+            '9'
+            '10'
+            '11'
+            '12'
+            '13'
+            '14'
+            '15'
+            '16'
+            '17'
+            '18'
+            '19'
+            '20'
+            '21'
+            '22'
+            '23'
+            '24'
+            '25'
+            '26'
+            '27'
+            '28'
+          )
+          MaxLength = 0
+          Style = csDropDownList
+          TabOrder = 2
+        end
+        object btnGerarParcelas: TSpeedButton
+          Left = 488
+          Height = 47
+          Top = 9
+          Width = 224
+          Caption = 'Gerar Parcelas'
+        end
+      end
+      object DBGrid2: TDBGrid
+        Left = 0
+        Height = 246
+        Top = 64
+        Width = 1038
+        Align = alClient
+        Color = clWindow
+        Columns = <        
+          item
+            Title.Caption = 'VALOR'
+            Width = 250
+            FieldName = 'VALOR'
+          end        
+          item
+            Title.Caption = 'DATA VENC.'
+            Width = 200
+            FieldName = 'DATA_VENCIMENTO'
+          end        
+          item
+            Title.Caption = 'DATA PGTO.'
+            Width = 200
+            FieldName = 'DATA_PAGAMEMTO'
+          end        
+          item
+            Title.Caption = 'STATUS'
+            Width = 200
+            FieldName = 'STATUS'
+          end>
+        DataSource = DM.DSContaAReceber
+        Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+        TabOrder = 1
+      end
+    end
+  end
+  object Label3: TLabel
+    Left = 184
+    Height = 15
+    Top = 8
+    Width = 28
+    Caption = 'DATA'
+    ParentColor = False
+    OnClick = Label3Click
+  end
+  object DBEdit2: TDBEdit
+    Left = 184
+    Height = 23
+    Top = 24
+    Width = 80
+    DataField = 'DATA'
+    DataSource = DM.DSVenda
+    MaxLength = 0
+    TabOrder = 3
+  end
+  object DBEdit3: TDBEdit
+    Left = 272
+    Height = 23
+    Top = 24
+    Width = 80
+    DataField = 'HORARIO'
+    DataSource = DM.DSVenda
+    MaxLength = 0
+    TabOrder = 4
+  end
+  object Label4: TLabel
+    Left = 272
+    Height = 15
+    Top = 8
+    Width = 52
+    Caption = 'HORÁRIO'
+    ParentColor = False
+    OnClick = Label3Click
+  end
+  object DBEdit4: TDBEdit
+    Left = 360
+    Height = 23
+    Top = 24
+    Width = 80
+    DataField = 'CLIENTE'
+    DataSource = DM.DSVenda
+    MaxLength = 0
+    TabOrder = 5
+  end
+  object Label5: TLabel
+    Left = 360
+    Height = 15
+    Top = 8
+    Width = 44
+    Caption = 'CLIENTE'
+    ParentColor = False
+    OnClick = Label3Click
+  end
+  object DBEdit5: TDBEdit
+    Left = 832
+    Height = 23
+    Top = 24
+    Width = 152
+    DataField = 'VALOR_TOTAL'
+    DataSource = DM.DSVenda
+    MaxLength = 0
+    TabOrder = 6
+  end
+  object Label6: TLabel
+    Left = 832
+    Height = 15
+    Top = 8
+    Width = 71
+    Caption = 'VALOR TOTAL'
+    ParentColor = False
+    OnClick = Label3Click
+  end
+end

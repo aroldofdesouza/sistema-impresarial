@@ -9,7 +9,7 @@
         <Filename Value="SistemaImpresarial.lpr"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="43"/>
+        <UsageCount Value="48"/>
       </Unit>
       <Unit>
         <Filename Value="umenu.pas"/>
@@ -20,7 +20,7 @@
         <UnitName Value="uMenu"/>
         <TopLine Value="58"/>
         <CursorPos X="20" Y="68"/>
-        <UsageCount Value="43"/>
+        <UsageCount Value="48"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -31,11 +31,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="uDM"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="42"/>
-        <CursorPos Y="58"/>
-        <UsageCount Value="43"/>
+        <TopLine Value="67"/>
+        <CursorPos Y="83"/>
+        <UsageCount Value="48"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -46,9 +45,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uCadastroCliente"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="4"/>
         <CursorPos Y="8"/>
-        <UsageCount Value="43"/>
+        <UsageCount Value="48"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -59,10 +58,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uEdicaoCliente"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="5"/>
         <TopLine Value="76"/>
         <CursorPos Y="81"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="42"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -70,12 +69,13 @@
         <Filename Value="ucadastroproduto.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FCadastroProduto"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uCadastroProduto"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="6"/>
         <TopLine Value="45"/>
         <CursorPos X="6" Y="53"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="36"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -83,136 +83,152 @@
         <Filename Value="uedicaoproduto.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FEdicaoProduto"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uEdicaoProduto"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="3"/>
         <TopLine Value="68"/>
         <CursorPos X="17" Y="75"/>
-        <UsageCount Value="29"/>
+        <UsageCount Value="34"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="updv.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FPDV"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uPDV"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="59"/>
+        <CursorPos X="3" Y="71"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
       <Position>
-        <Filename Value="uedicaoproduto.pas"/>
-        <Caret Line="42" Column="10" TopLine="26"/>
+        <Filename Value="updv.pas"/>
+        <Caret Line="37" Column="10" TopLine="21"/>
       </Position>
       <Position>
-        <Filename Value="uedicaoproduto.pas"/>
-        <Caret Line="43" Column="10" TopLine="27"/>
+        <Filename Value="udm.pas"/>
+        <Caret Line="83" TopLine="67"/>
       </Position>
       <Position>
-        <Filename Value="uedicaoproduto.pas"/>
-        <Caret Line="44" Column="10" TopLine="28"/>
-      </Position>
-      <Position>
-        <Filename Value="uedicaocliente.pas"/>
-        <Caret Line="101" Column="6" TopLine="92"/>
-      </Position>
-      <Position>
-        <Filename Value="uedicaoproduto.pas"/>
-        <Caret Line="46" Column="10" TopLine="30"/>
-      </Position>
-      <Position>
-        <Filename Value="uedicaocliente.pas"/>
-        <Caret Line="105" Column="10" TopLine="92"/>
-      </Position>
-      <Position>
-        <Filename Value="uedicaoproduto.pas"/>
-        <Caret Line="64" Column="52" TopLine="53"/>
-      </Position>
-      <Position>
-        <Filename Value="uedicaoproduto.pas"/>
-        <Caret Line="78" Column="15" TopLine="62"/>
-      </Position>
-      <Position>
-        <Filename Value="ucadastroproduto.pas"/>
-        <Caret Line="35" Column="10" TopLine="22"/>
-      </Position>
-      <Position>
-        <Filename Value="ucadastroproduto.pas"/>
-        <Caret Line="36" Column="10" TopLine="22"/>
-      </Position>
-      <Position>
-        <Filename Value="ucadastroproduto.pas"/>
+        <Filename Value="updv.pas"/>
         <Caret Line="38" Column="10" TopLine="22"/>
       </Position>
       <Position>
-        <Filename Value="ucadastrocliente.pas"/>
-        <Caret Line="55" Column="29" TopLine="51"/>
+        <Filename Value="updv.pas"/>
+        <Caret Line="39" Column="10" TopLine="23"/>
       </Position>
       <Position>
-        <Filename Value="ucadastroproduto.pas"/>
-        <Caret Line="39" Column="12" TopLine="39"/>
+        <Filename Value="updv.pas"/>
+        <Caret Line="40" Column="10" TopLine="24"/>
       </Position>
       <Position>
-        <Filename Value="ucadastrocliente.pas"/>
-        <Caret Line="66" TopLine="63"/>
+        <Filename Value="updv.pas"/>
+        <Caret Line="41" Column="10" TopLine="25"/>
       </Position>
       <Position>
-        <Filename Value="ucadastroproduto.pas"/>
-        <Caret Line="62" Column="29" TopLine="47"/>
+        <Filename Value="updv.pas"/>
+        <Caret Line="42" Column="10" TopLine="26"/>
       </Position>
       <Position>
-        <Filename Value="ucadastrocliente.pas"/>
-        <Caret Line="74" TopLine="63"/>
+        <Filename Value="updv.pas"/>
+        <Caret Line="45" Column="10" TopLine="29"/>
       </Position>
       <Position>
-        <Filename Value="ucadastroproduto.pas"/>
-        <Caret Line="74" Column="15" TopLine="58"/>
+        <Filename Value="updv.pas"/>
+        <Caret Line="53" Column="3" TopLine="41"/>
       </Position>
       <Position>
-        <Filename Value="umenu.pas"/>
-        <Caret Line="56" Column="24" TopLine="49"/>
+        <Filename Value="updv.pas"/>
+        <Caret Line="55" Column="3" TopLine="43"/>
       </Position>
       <Position>
-        <Filename Value="umenu.pas"/>
-        <Caret Line="57" Column="24" TopLine="50"/>
+        <Filename Value="updv.pas"/>
+        <Caret Line="57" Column="3" TopLine="45"/>
       </Position>
       <Position>
-        <Filename Value="umenu.pas"/>
-        <Caret Line="56" Column="24" TopLine="49"/>
+        <Filename Value="updv.pas"/>
+        <Caret Line="58" Column="3" TopLine="46"/>
       </Position>
       <Position>
-        <Filename Value="umenu.pas"/>
-        <Caret Line="57" Column="24" TopLine="50"/>
+        <Filename Value="updv.pas"/>
+        <Caret Line="60" Column="3" TopLine="48"/>
       </Position>
       <Position>
-        <Filename Value="umenu.pas"/>
-        <Caret Line="56" Column="24" TopLine="49"/>
+        <Filename Value="updv.pas"/>
+        <Caret Line="61" Column="3" TopLine="49"/>
       </Position>
       <Position>
-        <Filename Value="umenu.pas"/>
-        <Caret Line="58" Column="24" TopLine="51"/>
+        <Filename Value="updv.pas"/>
+        <Caret Line="63" Column="3" TopLine="51"/>
       </Position>
       <Position>
-        <Filename Value="umenu.pas"/>
-        <Caret Line="24" Column="38" TopLine="22"/>
+        <Filename Value="updv.pas"/>
+        <Caret Line="65" Column="3" TopLine="53"/>
       </Position>
       <Position>
-        <Filename Value="umenu.pas"/>
-        <Caret Line="77" Column="32" TopLine="64"/>
+        <Filename Value="updv.pas"/>
+        <Caret Line="64" Column="3" TopLine="52"/>
       </Position>
       <Position>
-        <Filename Value="umenu.pas"/>
-        <Caret Line="82" Column="32" TopLine="70"/>
+        <Filename Value="updv.pas"/>
+        <Caret Line="65" Column="3" TopLine="53"/>
       </Position>
       <Position>
-        <Filename Value="ucadastroproduto.pas"/>
-        <Caret Line="8" Column="3" TopLine="2"/>
+        <Filename Value="updv.pas"/>
+        <Caret Line="64" Column="3" TopLine="52"/>
       </Position>
       <Position>
-        <Filename Value="udm.pas"/>
-        <Caret Line="55" TopLine="39"/>
+        <Filename Value="updv.pas"/>
+        <Caret Line="65" Column="3" TopLine="53"/>
       </Position>
       <Position>
-        <Filename Value="udm.pas"/>
-        <Caret Line="56" TopLine="40"/>
+        <Filename Value="updv.pas"/>
+        <Caret Line="64" Column="3" TopLine="52"/>
       </Position>
       <Position>
-        <Filename Value="udm.pas"/>
-        <Caret Line="57" TopLine="41"/>
+        <Filename Value="updv.pas"/>
+        <Caret Line="63" Column="3" TopLine="51"/>
+      </Position>
+      <Position>
+        <Filename Value="updv.pas"/>
+        <Caret Line="65" Column="3" TopLine="53"/>
+      </Position>
+      <Position>
+        <Filename Value="updv.pas"/>
+        <Caret Line="66" Column="3" TopLine="54"/>
+      </Position>
+      <Position>
+        <Filename Value="updv.pas"/>
+        <Caret Line="65" Column="3" TopLine="53"/>
+      </Position>
+      <Position>
+        <Filename Value="updv.pas"/>
+        <Caret Line="66" Column="3" TopLine="54"/>
+      </Position>
+      <Position>
+        <Filename Value="updv.pas"/>
+        <Caret Line="67" Column="3" TopLine="55"/>
+      </Position>
+      <Position>
+        <Filename Value="updv.pas"/>
+        <Caret Line="68" Column="3" TopLine="56"/>
+      </Position>
+      <Position>
+        <Filename Value="updv.pas"/>
+        <Caret Line="69" Column="3" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="updv.pas"/>
+        <Caret Line="70" Column="3" TopLine="58"/>
       </Position>
     </JumpHistory>
     <RunParams>

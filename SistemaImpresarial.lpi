@@ -76,6 +76,7 @@
         <Filename Value="ucadastroproduto.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FCadastroProduto"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uCadastroProduto"/>
       </Unit>
@@ -83,8 +84,17 @@
         <Filename Value="uedicaoproduto.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FEdicaoProduto"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uEdicaoProduto"/>
+      </Unit>
+      <Unit>
+        <Filename Value="updv.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FPDV"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uPDV"/>
       </Unit>
     </Units>
   </ProjectOptions>

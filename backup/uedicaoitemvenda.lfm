@@ -6,6 +6,7 @@ object FEdicaoItemVenda: TFEdicaoItemVenda
   Caption = 'Lançamento de Item de Venda'
   ClientHeight = 167
   ClientWidth = 680
+  OnClose = FormClose
   Position = poDesktopCenter
   LCLVersion = '2.2.4.0'
   object Label1: TLabel

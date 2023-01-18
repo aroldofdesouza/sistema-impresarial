@@ -1611,4 +1611,22 @@ object FMenu: TFMenu
       end
     end
   end
+  object QUltimaChaveVenda: TZQuery
+    Connection = DM.ZConnection1
+    SQL.Strings = (
+      'SELECT MAX(CHAVE) + 1 FROM VENDAS'
+    )
+    Params = <>
+    Left = 424
+    Top = 127
+    object QUltimaChaveVendaADD: TLargeintField
+      FieldKind = fkData
+      FieldName = 'ADD'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+  end
 end

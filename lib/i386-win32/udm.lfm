@@ -394,6 +394,9 @@ object DM: TDM
   object TItemVenda: TZTable
     Connection = ZConnection1
     TableName = 'ITEM_VENDAS'
+    MasterFields = 'CHAVE'
+    MasterSource = DSVenda
+    LinkedFields = 'CHAVE_VENDA'
     Left = 480
     Top = 32
     object TItemVendaCHAVE: TLongintField

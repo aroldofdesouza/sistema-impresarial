@@ -52,9 +52,12 @@ type
     TabSheet2: TTabSheet;
     QUltimaChaveItemVenda: TZQuery;
     QUltimaChaveContaAReceber: TZQuery;
+    procedure btnCancelarClick(Sender: TObject);
+    procedure btnConcluirClick(Sender: TObject);
     procedure btnEditarItemClick(Sender: TObject);
     procedure btnExcluirItemClick(Sender: TObject);
     procedure btnInserirItemClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure Label3Click(Sender: TObject);
   private
 
@@ -91,12 +94,35 @@ begin
   FEdicaoItemVenda.ShowModal;
 end;
 
+procedure TFPDV.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+begin
+  if (btnCancelar.Enabled = False) then
+  begin
+    DM.TVenda.Cancel;
+  end;
+end;
+
 procedure TFPDV.btnEditarItemClick(Sender: TObject);
 begin
   inserindo_novo_item := False;
   DM.TItemVenda.Edit;
   FEdicaoItemVenda := TFEdicaoItemVenda.Create(Self);
   FEdicaoItemVenda.ShowModal;
+end;
+
+procedure TFPDV.btnCancelarClick(Sender: TObject);
+begin
+  btnCancelar.Enabled := False;
+  DM.TVenda.Cancel;
+  Close;
+end;
+
+procedure TFPDV.btnConcluirClick(Sender: TObject);
+begin
+  btnCancelar.Enabled := False;
+  DM.TVenda.Post;
+  DM.TVenda.ApplyUpdates;
+  Close;
 end;
 
 procedure TFPDV.btnExcluirItemClick(Sender: TObject);

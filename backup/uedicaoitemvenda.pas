@@ -26,6 +26,7 @@ type
     btnSalvar: TSpeedButton;
     procedure btnCancelarClick(Sender: TObject);
     procedure btnSalvarClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
   private
 
   public
@@ -56,6 +57,15 @@ begin
   DM.TItemVenda.Post;
   DM.TItemVenda.ApplyUpdates;
   Close;
+end;
+
+procedure TFEdicaoItemVenda.FormClose(Sender: TObject;
+  var CloseAction: TCloseAction);
+begin
+  if (btnCancelar.Enabled = True) then
+  begin
+    DM.TItemVenda.Cancel;
+  end;
 end;
 
 end.

@@ -83,6 +83,7 @@ object FPDV: TFPDV
       Width = 743
       Align = alClient
       Caption = 'Concluir Venda'
+      OnClick = btnConcluirClick
     end
     object btnCancelar: TSpeedButton
       Left = 744
@@ -91,6 +92,7 @@ object FPDV: TFPDV
       Width = 301
       Align = alRight
       Caption = 'Cancelar e Sair'
+      OnClick = btnCancelarClick
     end
   end
   object PageControl1: TPageControl
@@ -147,6 +149,7 @@ object FPDV: TFPDV
             Top = 8
             Width = 150
             Caption = 'Excluir Item'
+            OnClick = btnExcluirItemClick
           end
         end
       end

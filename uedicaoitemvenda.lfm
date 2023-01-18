@@ -107,7 +107,7 @@ object FEdicaoItemVenda: TFEdicaoItemVenda
   object btnCancelar: TSpeedButton
     Left = 504
     Height = 64
-    Top = 80
+    Top = 83
     Width = 156
     Caption = 'Cancelar'
     OnClick = btnCancelarClick

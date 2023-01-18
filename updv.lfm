@@ -6,6 +6,7 @@ object FPDV: TFPDV
   Caption = 'Ponto de Venda'
   ClientHeight = 509
   ClientWidth = 1046
+  OnClose = FormClose
   LCLVersion = '2.2.4.0'
   WindowState = wsMaximized
   object Panel1: TPanel
@@ -83,6 +84,7 @@ object FPDV: TFPDV
       Width = 743
       Align = alClient
       Caption = 'Concluir Venda'
+      OnClick = btnConcluirClick
     end
     object btnCancelar: TSpeedButton
       Left = 744
@@ -91,6 +93,7 @@ object FPDV: TFPDV
       Width = 301
       Align = alRight
       Caption = 'Cancelar e Sair'
+      OnClick = btnCancelarClick
     end
   end
   object PageControl1: TPageControl

@@ -5,8 +5,8 @@ unit uMenu;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Menus, ExtCtrls,
-  Buttons, StdCtrls;
+  Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, Menus, ExtCtrls,
+  Buttons, StdCtrls, ZDataset;
 
 type
 
@@ -21,6 +21,8 @@ type
     Panel1: TPanel;
     btnCadastroClientes: TSpeedButton;
     btnCadastroProduto: TSpeedButton;
+    QUltimaChaveVenda: TZQuery;
+    QUltimaChaveVendaADD: TLargeintField;
     procedure Abrir_Tela_CadastroCliente();
     procedure Abrir_Tela_CadastroProduto();
     procedure Abrir_Tela_PDV();
@@ -61,6 +63,17 @@ end;
 
 procedure TFMenu.Abrir_Tela_PDV;
 begin
+  QUltimaChaveVenda.Close;
+  QUltimaChaveVenda.Open;
+  DM.TVenda.Insert;
+  DM.TVendaCHAVE.Value := QUltimaChaveVendaADD.Value;
+  DM.TVendaDATA.Value := Date;
+  DM.TVendaHORARIO.Value := Time;
+  DM.TVendaNUMERO.Value := QUltimaChaveVendaADD.Value;
+
+  DM.TItemVenda.Close;
+  DM.TItemVenda.Open;
+
   FPDV := TFPDV.Create(Self);
   FPDV.ShowModal;
 end;
@@ -80,6 +93,9 @@ begin
   DM := TDM.Create(Self);
   DM.TClientes.Open;
   DM.TProdutos.Open;
+  DM.TVenda.Open;
+  DM.TItemVenda.Open;
+  DM.TContaAReceber.Open;
 end;
 
 procedure TFMenu.MenuItem2Click(Sender: TObject);

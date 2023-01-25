@@ -6,6 +6,7 @@ object FPDV: TFPDV
   Caption = 'Ponto de Venda'
   ClientHeight = 509
   ClientWidth = 1046
+  OnClose = FormClose
   LCLVersion = '2.2.4.0'
   WindowState = wsMaximized
   object Panel1: TPanel
@@ -416,8 +417,8 @@ object FPDV: TFPDV
       'SELECT MAX(CHAVE) + 1 FROM ITEM_VENDAS'
     )
     Params = <>
-    Left = 53
-    Top = 196
+    Left = 88
+    Top = 192
     object QUltimaChaveItemVendaADD: TLargeintField
       FieldKind = fkData
       FieldName = 'ADD'
@@ -434,7 +435,7 @@ object FPDV: TFPDV
       'SELECT MAX(CHAVE) + 1 FROM CONTA_A_RECEBER'
     )
     Params = <>
-    Left = 53
+    Left = 88
     Top = 272
     object QUltimaChaveContaAReceberADD: TLargeintField
       FieldKind = fkData
@@ -444,6 +445,37 @@ object FPDV: TFPDV
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = True
       Required = False
+    end
+  end
+  object QSomaItens: TZQuery
+    Connection = DM.ZConnection1
+    SQL.Strings = (
+      'SELECT SUM(VALOR_TOTAL) FROM ITEM_VENDAS'
+      'WHERE ITEM_VENDAS.CHAVE_VENDA = :chavevenda '
+    )
+    Params = <    
+      item
+        DataType = ftInteger
+        Name = 'chavevenda'
+        ParamType = ptInput
+      end>
+    Left = 88
+    Top = 336
+    ParamData = <    
+      item
+        DataType = ftInteger
+        Name = 'chavevenda'
+        ParamType = ptInput
+      end>
+    object QSomaItensSUM: TFloatField
+      FieldKind = fkData
+      FieldName = 'SUM'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      Precision = 2
     end
   end
 end

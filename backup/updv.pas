@@ -46,17 +46,20 @@ type
     btnGerarParcelas: TSpeedButton;
     btnConcluir: TSpeedButton;
     btnCancelar: TSpeedButton;
+    QSomaItensSUM: TFloatField;
     QUltimaChaveContaAReceberADD: TLargeintField;
     QUltimaChaveItemVendaADD: TLargeintField;
     TabSheet1: TTabSheet;
     TabSheet2: TTabSheet;
     QUltimaChaveItemVenda: TZQuery;
     QUltimaChaveContaAReceber: TZQuery;
+    QSomaItens: TZQuery;
     procedure btnCancelarClick(Sender: TObject);
     procedure btnConcluirClick(Sender: TObject);
     procedure btnEditarItemClick(Sender: TObject);
     procedure btnExcluirItemClick(Sender: TObject);
     procedure btnInserirItemClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure Label3Click(Sender: TObject);
   private
 
@@ -91,6 +94,19 @@ begin
   DM.TItemVendaCHAVE_VENDA.Value := DM.TVendaCHAVE.Value;
   FEdicaoItemVenda := TFEdicaoItemVenda.Create(Self);
   FEdicaoItemVenda.ShowModal;
+
+  QSomaItens.Close;
+  QSomaItens.ParamByName('chavevenda').Value := DM.TVendaCHAVE.Value;
+  QSomaItens.Open;
+  DM.TVendaVALOR_TOTAL.Value := QSomaItensSUM.Value;
+end;
+
+procedure TFPDV.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+begin
+  if (btnCancelar.Enabled = False) then
+  begin
+    DM.TVenda.Cancel;
+  end;
 end;
 
 procedure TFPDV.btnEditarItemClick(Sender: TObject);
@@ -99,6 +115,11 @@ begin
   DM.TItemVenda.Edit;
   FEdicaoItemVenda := TFEdicaoItemVenda.Create(Self);
   FEdicaoItemVenda.ShowModal;
+
+  QSomaItens.Close;
+  QSomaItens.ParamByName('chavevenda').Value := DM.TVendaCHAVE.Value;
+  QSomaItens.Open;
+  DM.TVendaVALOR_TOTAL.Value := QSomaItensSUM.Value;
 end;
 
 procedure TFPDV.btnCancelarClick(Sender: TObject);

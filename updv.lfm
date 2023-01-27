@@ -299,6 +299,7 @@ object FPDV: TFPDV
           Top = 9
           Width = 224
           Caption = 'Gerar Parcelas'
+          OnClick = btnGerarParcelasClick
         end
       end
       object DBGrid2: TDBGrid

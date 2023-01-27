@@ -74,6 +74,9 @@ begin
   DM.TItemVenda.Close;
   DM.TItemVenda.Open;
 
+  DM.TContaAReceber.Close;
+  DM.TContaAReceber.Open;
+
   FPDV := TFPDV.Create(Self);
   FPDV.ShowModal;
 end;

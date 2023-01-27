@@ -63,6 +63,17 @@ end;
 
 procedure TFMenu.Abrir_Tela_PDV;
 begin
+  QUltimaChaveVenda.Close;
+  QUltimaChaveVenda.Open;
+  DM.TVenda.Insert;
+  DM.TVendaCHAVE.Value := QUltimaChaveVendaADD.Value;
+  DM.TVendaDATA.Value := Date;
+  DM.TVendaHORARIO.Value := Time;
+  DM.TVendaNUMERO.Value := QUltimaChaveVendaADD.Value;
+
+  DM.TItemVenda.Close;
+  DM.TItemVenda.Open;
+
   FPDV := TFPDV.Create(Self);
   FPDV.ShowModal;
 end;
@@ -74,13 +85,6 @@ end;
 
 procedure TFMenu.btnPDVClick(Sender: TObject);
 begin
-  QUltimaChaveVenda.Close;
-  QUltimaChaveVenda.Open;
-  DM.TVenda.Insert;
-  DM.TVendaCHAVE.Value := QUltimaChaveVendaADD.Value;
-  DM.TVendaDATA.Value := Date;
-  DM.TVendaHORARIO.Value := Time;
-  DM.TVendaNUMERO.Value := QUltimaChaveVendaADD.Value;
   Abrir_Tela_PDV();
 end;
 

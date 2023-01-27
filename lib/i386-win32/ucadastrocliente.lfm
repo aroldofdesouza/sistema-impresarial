@@ -1,7 +1,7 @@
 object FCadastroCliente: TFCadastroCliente
-  Left = 221
+  Left = 394
   Height = 447
-  Top = 198
+  Top = 200
   Width = 692
   Caption = 'Cadastro de Clientes'
   ClientHeight = 447

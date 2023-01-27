@@ -1,8 +1,8 @@
 object DM: TDM
   OldCreateOrder = False
   Height = 251
-  HorizontalOffset = 242
-  VerticalOffset = 187
+  HorizontalOffset = 305
+  VerticalOffset = 165
   Width = 689
   object ZConnection1: TZConnection
     ControlsCodePage = cCP_UTF8
@@ -394,6 +394,9 @@ object DM: TDM
   object TItemVenda: TZTable
     Connection = ZConnection1
     TableName = 'ITEM_VENDAS'
+    MasterFields = 'CHAVE'
+    MasterSource = DSVenda
+    LinkedFields = 'CHAVE_VENDA'
     Left = 480
     Top = 32
     object TItemVendaCHAVE: TLongintField
@@ -477,6 +480,9 @@ object DM: TDM
   object TContaAReceber: TZTable
     Connection = ZConnection1
     TableName = 'CONTA_A_RECEBER'
+    MasterFields = 'CHAVE'
+    MasterSource = DSVenda
+    LinkedFields = 'CHAVE_VENDA'
     Left = 569
     Top = 32
     object TContaAReceberCHAVE: TLongintField
@@ -514,6 +520,8 @@ object DM: TDM
       ProviderFlags = [pfInUpdate]
       ReadOnly = False
       Required = False
+      DisplayFormat = '##########.00'
+      EditFormat = '##########.00'
       Precision = 2
     end
     object TContaAReceberDATA_VENCIMENTO: TDateField
@@ -524,6 +532,7 @@ object DM: TDM
       ProviderFlags = [pfInUpdate]
       ReadOnly = False
       Required = False
+      EditMask = '99/99/9999'
     end
     object TContaAReceberDATA_PAGAMEMTO: TDateField
       FieldKind = fkData
@@ -533,6 +542,7 @@ object DM: TDM
       ProviderFlags = [pfInUpdate]
       ReadOnly = False
       Required = False
+      EditMask = '99/99/9999'
     end
     object TContaAReceberSTATUS: TStringField
       FieldKind = fkData

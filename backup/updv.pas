@@ -58,6 +58,7 @@ type
     procedure btnConcluirClick(Sender: TObject);
     procedure btnEditarItemClick(Sender: TObject);
     procedure btnExcluirItemClick(Sender: TObject);
+    procedure btnGerarParcelasClick(Sender: TObject);
     procedure btnInserirItemClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure Label3Click(Sender: TObject);
@@ -141,6 +142,79 @@ procedure TFPDV.btnExcluirItemClick(Sender: TObject);
 begin
   DM.TItemVenda.Delete;
   DM.TItemVenda.ApplyUpdates;
+
+  QSomaItens.Close;
+  QSomaItens.ParamByName('chavevenda').Value := DM.TVendaCHAVE.Value;
+  QSomaItens.Open;
+  DM.TVendaVALOR_TOTAL.Value := QSomaItensSUM.Value;
+end;
+
+procedure TFPDV.btnGerarParcelasClick(Sender: TObject);
+var
+  valor_parcela: Double;
+  parcelas_lancadas: Integer;
+  data_vencimento: String;
+  mes, ano: Integer;
+begin
+  DM.TContaAReceber.First;
+  while not(DM.TContaAReceber.EOF) do
+  begin
+    DM.TContaAReceber.Delete;
+    DM.TContaAReceber.ApplyUpdates;
+  end;
+
+  if (DM.TVendaQUANTIDADE_PARCELAS.Value > 0) then
+  begin
+    valor_parcela := (DM.TVendaVALOR_TOTAL.Value - DM.TVendaVALOR_PAGO_ENTRADA.Value) / DM.TVendaQUANTIDADE_PARCELAS.Value;
+  end;
+
+  if (DM.TVendaVALOR_PAGO_ENTRADA.Value >0) then
+  begin
+    QUltimaChaveContaAReceber.Close;
+    QUltimaChaveContaAReceber.Open;
+    DM.TContaAReceber.Insert;
+    DM.TContaAReceberCHAVE.Value := QUltimaChaveContaAReceberADD.Value;
+    DM.TContaAReceberCHAVE_CLIENTE.Value:= DM.TVendaCLIENTE.Value;
+    DM.TContaAReceberCHAVE_VENDA.Value := DM.TVendaCHAVE.Value;
+    DM.TContaAReceberDATA_PAGAMEMTO.Value := DM.TVendaDATA.Value;
+    DM.TContaAReceberDATA_VENCIMENTO.Value:= DM.TVendaDATA.Value;
+    DM.TContaAReceberSTATUS.Value := 'PAGO';
+    DM.TContaAReceberVALOR.Value := DM.TVendaVALOR_PAGO_ENTRADA.Value;
+    DM.TContaAReceber.Post;
+    DM.TContaAReceber.ApplyUpdates;
+  end;
+
+  mes := StrToInt(FormatDateTime('MM', DM.TVendaDATA.Value));
+  ano := StrToInt(FormatDateTime('YYYY', DM.TVendaDATA.Value));
+  parcelas_lancadas := 0;
+  while (parcelas_lancadas < DM.TVendaQUANTIDADE_PARCELAS.Value) do
+  begin
+    if (mes = 12) then
+    begin
+      mes := 1;
+      ano := ano + 1;
+    end else
+    begin
+      mes := mes + 1;
+    end;
+    data_vencimento:= DM.TVendaDIA_DO_MES_PRA_VENCER.AsString+'/'+IntToStr(mes)+'/'+IntToStr(ano);
+
+    QUltimaChaveContaAReceber.Close;
+    QUltimaChaveContaAReceber.Open;
+    DM.TContaAReceber.Insert;
+    DM.TContaAReceberCHAVE.Value := QUltimaChaveContaAReceberADD.Value;
+    DM.TContaAReceberCHAVE_CLIENTE.Value:= DM.TVendaCLIENTE.Value;
+    DM.TContaAReceberCHAVE_VENDA.Value := DM.TVendaCHAVE.Value;
+    DM.TContaAReceberDATA_VENCIMENTO.Value:= StrToDateTime(data_vencimento);
+    DM.TContaAReceberSTATUS.Value := 'PENDENTE';
+    DM.TContaAReceberVALOR.Value := valor_parcela;
+    DM.TContaAReceber.Post;
+    DM.TContaAReceber.ApplyUpdates;
+
+    parcelas_lancadas:= parcelas_lancadas +1;
+
+  end;
+
 end;
 
 end.

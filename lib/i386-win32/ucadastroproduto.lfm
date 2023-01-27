@@ -104,7 +104,7 @@ object FCadastroProduto: TFCadastroProduto
         Title.Caption = 'PREÇO COMPRA'
         Width = 125
         FieldName = 'PRECO_COMPRA'
-        DisplayFormat = '##########.##'
+        DisplayFormat = '##########.00'
       end    
       item
         Title.Caption = 'PREÇO VENDA'

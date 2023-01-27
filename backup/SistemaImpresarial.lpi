@@ -26,6 +26,9 @@
     </RunParams>
     <RequiredPackages>
       <Item>
+        <PackageName Value="DateTimeCtrls"/>
+      </Item>
+      <Item>
         <PackageName Value="FCL"/>
       </Item>
       <Item>
@@ -103,6 +106,13 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uEdicaoItemVenda"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uconsultavendas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FConsultaVendas"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uConsultaVendas"/>
       </Unit>
     </Units>
   </ProjectOptions>

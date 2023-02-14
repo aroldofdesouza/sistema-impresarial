@@ -9,7 +9,7 @@
         <Filename Value="SistemaImpresarial.lpr"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="64"/>
+        <UsageCount Value="65"/>
       </Unit>
       <Unit>
         <Filename Value="umenu.pas"/>
@@ -18,10 +18,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uMenu"/>
-        <IsVisibleTab Value="True"/>
         <TopLine Value="97"/>
         <CursorPos X="31" Y="100"/>
-        <UsageCount Value="64"/>
+        <UsageCount Value="65"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -35,7 +34,7 @@
         <EditorIndex Value="2"/>
         <TopLine Value="71"/>
         <CursorPos Y="83"/>
-        <UsageCount Value="64"/>
+        <UsageCount Value="65"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -48,7 +47,7 @@
         <UnitName Value="uCadastroCliente"/>
         <EditorIndex Value="6"/>
         <CursorPos Y="8"/>
-        <UsageCount Value="64"/>
+        <UsageCount Value="65"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -62,7 +61,7 @@
         <EditorIndex Value="7"/>
         <TopLine Value="76"/>
         <CursorPos Y="81"/>
-        <UsageCount Value="58"/>
+        <UsageCount Value="59"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -76,7 +75,7 @@
         <EditorIndex Value="8"/>
         <TopLine Value="45"/>
         <CursorPos X="6" Y="53"/>
-        <UsageCount Value="52"/>
+        <UsageCount Value="53"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -90,7 +89,7 @@
         <EditorIndex Value="5"/>
         <TopLine Value="68"/>
         <CursorPos X="17" Y="75"/>
-        <UsageCount Value="50"/>
+        <UsageCount Value="51"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -104,7 +103,7 @@
         <EditorIndex Value="3"/>
         <TopLine Value="136"/>
         <CursorPos X="27" Y="149"/>
-        <UsageCount Value="38"/>
+        <UsageCount Value="39"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -118,7 +117,7 @@
         <EditorIndex Value="4"/>
         <TopLine Value="80"/>
         <CursorPos X="70" Y="91"/>
-        <UsageCount Value="34"/>
+        <UsageCount Value="35"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -126,37 +125,19 @@
         <Filename Value="uconsultavendas.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FConsultaVendas"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uConsultaVendas"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="32"/>
-        <CursorPos X="120" Y="43"/>
-        <UsageCount Value="21"/>
+        <TopLine Value="57"/>
+        <CursorPos X="18" Y="69"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="umenu.pas"/>
-        <Caret Line="75" Column="20" TopLine="67"/>
-      </Position>
-      <Position>
-        <Filename Value="umenu.pas"/>
-        <Caret Line="76" Column="20" TopLine="68"/>
-      </Position>
-      <Position>
-        <Filename Value="umenu.pas"/>
-        <Caret Line="77" Column="20" TopLine="69"/>
-      </Position>
-      <Position>
-        <Filename Value="updv.pas"/>
-        <Caret Line="111" Column="29" TopLine="95"/>
-      </Position>
-      <Position>
-        <Filename Value="updv.pas"/>
-        <Caret Line="106" Column="32" TopLine="96"/>
-      </Position>
       <Position>
         <Filename Value="updv.pas"/>
         <Caret Line="115" Column="27" TopLine="107"/>
@@ -255,6 +236,26 @@
       <Position>
         <Filename Value="umenu.pas"/>
         <Caret Line="30" Column="43" TopLine="23"/>
+      </Position>
+      <Position>
+        <Filename Value="uconsultavendas.pas"/>
+        <Caret Line="43" Column="120" TopLine="32"/>
+      </Position>
+      <Position>
+        <Filename Value="uconsultavendas.pas"/>
+        <Caret Line="45" Column="120" TopLine="34"/>
+      </Position>
+      <Position>
+        <Filename Value="uconsultavendas.pas"/>
+        <Caret Line="52" Column="31" TopLine="40"/>
+      </Position>
+      <Position>
+        <Filename Value="uconsultavendas.pas"/>
+        <Caret Line="57" Column="89" TopLine="50"/>
+      </Position>
+      <Position>
+        <Filename Value="uconsultavendas.pas"/>
+        <Caret Line="58" Column="110" TopLine="50"/>
       </Position>
     </JumpHistory>
     <RunParams>

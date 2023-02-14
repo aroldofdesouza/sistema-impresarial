@@ -111,6 +111,7 @@
         <Filename Value="uconsultavendas.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FConsultaVendas"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uConsultaVendas"/>
       </Unit>

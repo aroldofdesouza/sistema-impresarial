@@ -6,6 +6,8 @@ object FConsultaVendas: TFConsultaVendas
   Caption = 'Consulta de Vendas'
   ClientHeight = 495
   ClientWidth = 1087
+  OnClose = FormClose
+  OnShow = FormShow
   LCLVersion = '2.2.4.0'
   WindowState = wsMaximized
   object Panel1: TPanel
@@ -77,6 +79,14 @@ object FConsultaVendas: TFConsultaVendas
       Caption = 'Buscar'
       OnClick = btnBuscarClick
     end
+    object txtValorTotalListado: TLabel
+      Left = 512
+      Height = 15
+      Top = 21
+      Width = 63
+      Caption = '                     '
+      ParentColor = False
+    end
   end
   object Label2: TLabel
     Left = 232
@@ -124,6 +134,7 @@ object FConsultaVendas: TFConsultaVendas
         FieldName = 'VALOR_TOTAL'
       end>
     DataSource = DM.DSVenda
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     TabOrder = 1
   end
 end

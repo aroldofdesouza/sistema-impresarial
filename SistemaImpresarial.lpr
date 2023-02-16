@@ -12,7 +12,7 @@ uses
   Interfaces, // this includes the LCL widgetset
   Forms, datetimectrls, zcomponent, uMenu, uDM, uCadastroCliente,
   uEdicaoCliente, uCadastroProduto, uEdicaoProduto, uPDV, uEdicaoItemVenda,
-  uConsultaVendas
+  uConsultaVendas, uContasAReceber
   { you can add units after this };
 
 {$R *.res}
@@ -28,6 +28,7 @@ begin
   Application.CreateForm(TFPDV, FPDV);
   Application.CreateForm(TFEdicaoItemVenda, FEdicaoItemVenda);
   Application.CreateForm(TFConsultaVendas, FConsultaVendas);
+  Application.CreateForm(TFContasAReceber, FContasAReceber);
   Application.Run;
 end.
 

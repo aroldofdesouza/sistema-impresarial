@@ -102,6 +102,7 @@ object FConsultaVendas: TFConsultaVendas
     Top = 58
     Width = 1087
     Align = alClient
+    AlternateColor = clMoneyGreen
     Color = clWindow
     Columns = <    
       item

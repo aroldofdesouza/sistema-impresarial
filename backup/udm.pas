@@ -82,8 +82,6 @@ var
 implementation
 
 
-
-
 {$R *.lfm}
 
 end.

@@ -568,6 +568,20 @@ object DM: TDM
       Required = False
       Size = 30
     end
+    object TStringField
+      FieldKind = fkLookup
+      FieldName = 'NOME'
+      Index = 7
+      KeyFields = 'CHAVE_CLIENTE'
+      LookupCache = False
+      LookupDataSet = TClientes
+      LookupKeyFields = 'CHAVE'
+      LookupResultField = 'NOME'
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 125
+    end
   end
   object DSVenda: TDataSource
     DataSet = TVenda

@@ -115,6 +115,14 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uConsultaVendas"/>
       </Unit>
+      <Unit>
+        <Filename Value="ucontasareceber.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FContasAReceber"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uContasAReceber"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
